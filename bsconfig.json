@@ -1,0 +1,6 @@
+{
+    "name" : "immutable-re-benchmark",
+    "sources" : { "dir" :  "src"},
+    "bs-dependencies" : [ "immutable-re" ],
+    "package-specs" : [ "es6" ]
+}

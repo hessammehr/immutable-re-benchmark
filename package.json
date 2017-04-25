@@ -1,0 +1,24 @@
+{
+  "name": "immutable-re-benchmark",
+  "version": "0.0.1",
+  "description": "Performance benchmarks for immutable datastructure in Reason/Ocaml",
+  "main": "out/main.js",
+  "dependencies": {
+    "bs-platform": "1.7.1",
+    "immutable-re": "0.0.6"
+  },
+  "devDependencies": {
+    "watch": "latest",
+    "rollup": "latest",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-watch": "^3.2.2"
+  },
+  "scripts": {
+    "build:bs": "bsb -make-world -w",
+    "build:rollup": "rollup -c -w",
+    "minify": "closure-compiler --js lib/goog/src/main.js --js node_modules/bs-platform/lib/goog/*.js --js node_modules/bucklescript-tea/lib/goog/src/*.js --js_output_file out/main.min.js  --compilation_level ADVANCED --language_out ECMASCRIPT5 --dependency_mode STRICT --entry_point goog:hello.main",
+    "minify:watch": "watch 'npm run minify' src"
+  },
+  "author": "S. Hessam M. Mehr (hessammehr@gmail.com)",
+  "license": "Apache"
+}
